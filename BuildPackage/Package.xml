@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<umbPackage>
+  <info>
+    <package>
+      <name>Diplo Media Downloader</name>
+      <version>1.0.0</version>
+      <iconUrl>https://www.diplo.co.uk/media/1176/diploauditlogviewericon.png</iconUrl>
+      <license url="http://opensource.org/licenses/MIT">MIT License</license>
+      <url>https://www.diplo.co.uk/blog/web-development/diplo-audit-log-viewer-for-umbraco-8/</url>
+      <requirements type="Strict">
+        <major>8</major>
+        <minor>0</minor>
+        <patch>0</patch>
+      </requirements>
+    </package>
+    <author>
+      <name>Dan Booth</name>
+      <website>https://www.diplo.co.uk</website>
+    </author>
+    <contributors>
+    </contributors>
+    <readme>
+      <![CDATA[Diplo Media Downloader for Umbraco CMS is an Umbraco 8 package that allows you to download files from the Umbraco Media Library as a zip archive.
+
+		You can download both files and folders. When downloading a folder it can include any nested folders and preserves the correct paths (so in theory you could download the entire media library!).
+
+		It adds a new menu item - called Download - to the Actions menu when in the Media section. This triggers a dialogue that prompts
+		you to confirm the download. If the media item selected is a Folder then you can choose whether to include any nested folders within the folder.]]>
+    </readme>
+  </info>
+  <DocumentTypes />
+  <Templates />
+  <Stylesheets />
+  <Macros />
+  <DictionaryItems />
+  <Languages />
+  <DataTypes />
+  <Actions />
+  <control />
+  <files />
+</umbPackage>

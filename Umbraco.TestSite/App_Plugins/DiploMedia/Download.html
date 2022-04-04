@@ -1,0 +1,26 @@
+﻿<div class="umb-dialog umb-pane" ng-controller="Diplo.Media.Controller as vm">
+    <div class="umb-dialog-body">
+        <umb-pane>
+            <p>Are you sure you want to download <strong>{{currentNode.name}}</strong> ?</p>
+
+            <div ng-show="vm.toggleShow">
+
+                <p>Include all nested folders?</p>
+
+                <umb-toggle checked="vm.checked"
+                            on-click="vm.toggle()"
+                            show-labels="true"
+                            label-on="Yes"
+                            label-off="No"
+                            label-position="right"
+                            hide-icons="true">
+                </umb-toggle>
+            </div>
+
+            <hr />
+
+            <umb-confirm on-confirm="vm.performDownload" on-cancel="vm.cancelDownload"></umb-confirm>
+
+        </umb-pane>
+    </div>
+</div>

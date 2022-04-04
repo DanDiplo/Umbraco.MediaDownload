@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- https://docs.microsoft.com/en-us/nuget/create-packages/creating-a-package -->
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>Diplo.MediaDownloader</id>
+    <version>1.0.0</version>
+    <title>Media Downloader for Umbraco</title>
+    <authors>Dan Booth</authors>
+    <owners>Dan Booth</owners>
+    <projectUrl>https://www.diplo.co.uk/blog/web-development/</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>
+		Diplo Media Downloader for Umbraco CMS is an Umbraco 8 package that allows you to download files from the Umbraco Media Library as a zip archive.
+
+		You can download both files and folders. When downloading a folder it can include any nested folders and preserves the correct paths (so in theory you could download the entire media library!).
+
+		It adds a new menu item - called Download - to the Actions menu when in the Media section. This triggers a dialogue that prompts
+		you to confirm the download. If the media item selected is a Folder then you can choose whether to include any nested folders within the folder.
+	</description>
+    <releaseNotes>
+      This is the initial release for Umbraco 8
+    </releaseNotes>
+    <summary>
+		Diplo Media Downloader for Umbraco CMS is an Umbraco 8 package that allows you to download files from the Umbraco Media Library as a zip archive.
+	</summary>
+    <copyright>Dan Booth</copyright>
+    <license type="expression">MIT</license>
+    <repository type="git" url="https://github.com/DanDiplo/Umbraco.AuditLogViewer" />
+    <language>en-GB</language>
+    <tags>umbraco umbraco8 developer backoffice media download zip</tags>
+    <iconUrl>https://www.diplo.co.uk/media/1176/diploauditlogviewericon.png</iconUrl>
+    <dependencies>
+      <dependency id="UmbracoCms.Core" version="8.0.0" />
+    </dependencies>
+  </metadata>
+</package>
