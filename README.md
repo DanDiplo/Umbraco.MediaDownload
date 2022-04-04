@@ -8,6 +8,8 @@ folders. When downloading a folder it can include any nested folders and preserv
 It adds a new menu item - called **Download** - to the **Actions** menu when in the **Media** section. This triggers a dialogue that prompts
 you to confirm the download. If the media item selected is a Folder then you can choose whether to include any nested folders within the folder.
 
+For more information read https://www.diplo.co.uk/blog/web-development/diplo-media-download-for-umbraco/
+
 ## Screenshots
 
 #### Download Action in Menu
@@ -17,6 +19,12 @@ you to confirm the download. If the media item selected is a Folder then you can
 #### Download Dialog Prompt
 
 ![Download_Dialog3](https://user-images.githubusercontent.com/6676168/161609394-180e3c23-106f-48df-b79d-b6d3658591f0.PNG)
+
+## Download & Installation
+
+Nuget: https://www.nuget.org/packages/Diplo.MediaDownloader/ 
+
+Our Umbraco: https://our.umbraco.com/packages/backoffice-extensions/diplo-media-download/ 
 
 ## Structure
 
