@@ -25,10 +25,10 @@
 	</summary>
     <copyright>Dan Booth</copyright>
     <license type="expression">MIT</license>
-    <repository type="git" url="https://github.com/DanDiplo/Umbraco.AuditLogViewer" />
+    <repository type="git" url="https://github.com/DanDiplo/Umbraco.MediaDownload" />
     <language>en-GB</language>
     <tags>umbraco umbraco8 developer backoffice media download zip</tags>
-    <iconUrl>https://www.diplo.co.uk/media/1176/diploauditlogviewericon.png</iconUrl>
+    <iconUrl>https://www.diplo.co.uk/media/1205/icon.png</iconUrl>
     <dependencies>
       <dependency id="UmbracoCms.Core" version="8.0.0" />
     </dependencies>
