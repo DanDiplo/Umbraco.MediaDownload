@@ -1,12 +1,22 @@
-# Diplo Media Download
+# Diplo Media Download for Umbraco
 
 ## Overview
 
-This is an **Umbraco 8** package that allows you to download files from the Umbraco Media Library as a zip archive. You can download both files and
-folders. When downloading a folder it can include any nested folders and preserves the correct paths (so in theory you could download the entire media library!).
+This is an **Umbraco 8** package that allows you to download files from the **Umbraco Media Library** as a zip archive. You can download both files and
+folders. When downloading a folder it can include any nested folders and preserves the correct paths (so in theory you could download your entire media library in one zip archive file!).
 
-It adds a new menu item - called **Download** - to the **Actions** menu when in the Media section. This triggers a dialogue that prompts
+It adds a new menu item - called **Download** - to the **Actions** menu when in the **Media** section. This triggers a dialogue that prompts
 you to confirm the download. If the media item selected is a Folder then you can choose whether to include any nested folders within the folder.
+
+## Screenshots
+
+#### Download Action in Menu
+
+![Download_Dialog2](https://user-images.githubusercontent.com/6676168/161609461-cc085543-4330-467c-ae1c-1c907269d56f.PNG)
+
+#### Download Dialog Prompt
+
+![Download_Dialog3](https://user-images.githubusercontent.com/6676168/161609394-180e3c23-106f-48df-b79d-b6d3658591f0.PNG)
 
 ## Structure
 
@@ -46,7 +56,7 @@ Controller: `/Umbraco/backoffice/DiploMedia/Media/Download/12345`
 
 The folder `Buildpackage` contains a batch file called `Build.bat` that can be executed to create both the NuGet and Umbraco package versions.
 
-Note: You need it to contain the correct path to `MSBuild.exe` on your system.
+**Note:** You need it to contain the correct path to `MSBuild.exe` on your system.
 
 If the build goes OK then you'll find the packages in the `BuildPackage\Packages` folder.
 
