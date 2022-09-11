@@ -20,14 +20,14 @@ namespace Diplo.MediaDownload
         private readonly ILogger logger;
         private readonly IMediaDownloadConfig config;
         private readonly byte[] buffer;
-        private readonly IMediaFileSystem _media;
+        private readonly IMediaFileSystem mediaFileSystem;
 
-        public ZipService(IMediaService mediaService, ILogger logger, IMediaDownloadConfig config, IMediaFileSystem media)
+        public ZipService(IMediaService mediaService, ILogger logger, IMediaDownloadConfig config, IMediaFileSystem mediaSystem)
         {
             this.mediaService = mediaService ?? throw new ArgumentNullException(nameof(mediaService));
             this.logger = logger ?? throw new ArgumentNullException(nameof(logger));
             this.config = config ?? throw new ArgumentNullException(nameof(config));
-            this._media = media ?? throw new ArgumentNullException(nameof(media)); ;
+            this.mediaFileSystem = mediaSystem ?? throw new ArgumentNullException(nameof(mediaSystem));
             this.buffer = new byte[config.BufferSizeBytes];
         }
 
@@ -101,13 +101,14 @@ namespace Diplo.MediaDownload
         {
             var filePath = file.GetUrl(Constants.Conventions.Media.File, logger);
 
-            if (_media.FileExists(filePath))
+            if (mediaFileSystem.FileExists(filePath))
             {
-                ZipEntry entry = new ZipEntry(ZipEntry.CleanName(Path.GetFileName(filePath)));
+                string fullPath = folderPath + Path.GetFileName(filePath);
+                ZipEntry entry = new ZipEntry(ZipEntry.CleanName(fullPath));
                 entry.DateTime = file.CreateDate;
                 zipStream.PutNextEntry(entry);
 
-                using (Stream stream = _media.OpenFile(filePath))
+                using (Stream stream = mediaFileSystem.OpenFile(filePath))
                 {
                     int sourceBytes;
 
