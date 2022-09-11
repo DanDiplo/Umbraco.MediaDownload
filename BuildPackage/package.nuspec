@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
     <id>Diplo.MediaDownloader</id>
-    <version>1.0.0</version>
+    <version>1.1.0</version>
     <title>Media Downloader for Umbraco</title>
     <authors>Dan Booth</authors>
     <owners>Dan Booth</owners>
@@ -18,7 +18,7 @@
 		you to confirm the download. If the media item selected is a Folder then you can choose whether to include any nested folders within the folder.
 	</description>
     <releaseNotes>
-      This is the initial release for Umbraco 8
+      Adds support for non-filesystem providers (eg. blob storage etc) - thanks, Aaron!
     </releaseNotes>
     <summary>
 		Diplo Media Downloader for Umbraco CMS is an Umbraco 8 package that allows you to download files from the Umbraco Media Library as a zip archive.

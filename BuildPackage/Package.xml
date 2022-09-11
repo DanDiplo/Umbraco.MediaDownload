@@ -3,7 +3,7 @@
   <info>
     <package>
       <name>Diplo Media Downloader</name>
-      <version>1.0.0</version>
+      <version>1.1.0</version>
       <iconUrl>https://www.diplo.co.uk/media/1176/diploauditlogviewericon.png</iconUrl>
       <license url="http://opensource.org/licenses/MIT">MIT License</license>
       <url>https://www.diplo.co.uk/blog/web-development/diplo-audit-log-viewer-for-umbraco-8/</url>
