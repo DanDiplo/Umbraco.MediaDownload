@@ -4,6 +4,7 @@ using System;
 using System.IO;
 using System.Web.Hosting;
 using Umbraco.Core;
+using Umbraco.Core.IO;
 using Umbraco.Core.Logging;
 using Umbraco.Core.Models;
 using Umbraco.Core.Services;
@@ -19,12 +20,14 @@ namespace Diplo.MediaDownload
         private readonly ILogger logger;
         private readonly IMediaDownloadConfig config;
         private readonly byte[] buffer;
+        private readonly IMediaFileSystem _media;
 
-        public ZipService(IMediaService mediaService, ILogger logger, IMediaDownloadConfig config)
+        public ZipService(IMediaService mediaService, ILogger logger, IMediaDownloadConfig config, IMediaFileSystem media)
         {
             this.mediaService = mediaService ?? throw new ArgumentNullException(nameof(mediaService));
             this.logger = logger ?? throw new ArgumentNullException(nameof(logger));
             this.config = config ?? throw new ArgumentNullException(nameof(config));
+            this._media = media ?? throw new ArgumentNullException(nameof(media)); ;
             this.buffer = new byte[config.BufferSizeBytes];
         }
 
@@ -96,25 +99,21 @@ namespace Diplo.MediaDownload
 
         private void AddFileToZipZip(ZipOutputStream zipStream, IMedia file, string folderPath)
         {
-            var url = file.GetUrl(Constants.Conventions.Media.File, logger);
+            var filePath = file.GetUrl(Constants.Conventions.Media.File, logger);
 
-            string filePath = HostingEnvironment.MapPath(url);
-
-            if (System.IO.File.Exists(filePath))
+            if (_media.FileExists(filePath))
             {
-                string fullPath = folderPath + Path.GetFileName(filePath);
-
-                ZipEntry entry = new ZipEntry(ZipEntry.CleanName(fullPath));
+                ZipEntry entry = new ZipEntry(ZipEntry.CleanName(Path.GetFileName(filePath)));
                 entry.DateTime = file.CreateDate;
                 zipStream.PutNextEntry(entry);
 
-                using (FileStream fs = System.IO.File.OpenRead(filePath))
+                using (Stream stream = _media.OpenFile(filePath))
                 {
                     int sourceBytes;
 
                     do
                     {
-                        sourceBytes = fs.Read(this.buffer, 0, buffer.Length);
+                        sourceBytes = stream.Read(this.buffer, 0, buffer.Length);
                         zipStream.Write(this.buffer, 0, sourceBytes);
                     } while (sourceBytes > 0);
                 }
