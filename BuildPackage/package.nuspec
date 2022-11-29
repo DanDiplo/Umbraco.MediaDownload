@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
     <id>Diplo.MediaDownloader</id>
-    <version>1.1.0</version>
+    <version>1.1.1</version>
     <title>Media Downloader for Umbraco</title>
     <authors>Dan Booth</authors>
     <owners>Dan Booth</owners>
@@ -27,7 +27,8 @@
     <license type="expression">MIT</license>
     <repository type="git" url="https://github.com/DanDiplo/Umbraco.MediaDownload" />
     <language>en-GB</language>
-    <tags>umbraco umbraco8 developer backoffice media download zip</tags>
+    <tags>umbraco umbraco8 developer backoffice media download zip umbraco-marketplace
+    </tags>
     <iconUrl>https://www.diplo.co.uk/media/1205/icon.png</iconUrl>
     <dependencies>
       <dependency id="UmbracoCms.Core" version="8.0.0" />

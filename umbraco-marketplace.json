@@ -1,0 +1,31 @@
+{
+  "Title": "Diplo Media Download",
+  "AlternatePackageNames": [ "Umbraco.MediaDownload" ],
+  "AuthorDetails": {
+    "Name": "Dan 'Diplo' Booth",
+    "Description": "Dan is an Umbraco MVP and has been releasing packages for Umbraco since Umbraco 6",
+    "Url": "https://www.diplo.co.uk/",
+    "ImageUrl": "https://pbs.twimg.com/profile_images/794295655846002688/S8SQ_XFM_400x400.jpg"
+  },
+  "Category": "Editor Tools",
+  "Description": "This is an Umbraco 8 package that allows you to download files from the Umbraco Media Library as a zip archive. You can download both files and folders. When downloading a folder it can include any nested folders and preserves the correct paths (so in theory you could download your entire media library in one zip archive file!).",
+  "DocumentationUrl": "https://github.com/DanDiplo/Umbraco.MediaDownload/blob/master/README.md",
+  "LicenseTypes": [ "Free" ],
+  "IssueTrackerUrl": "https://github.com/DanDiplo/Umbraco.MediaDownload/issues",
+  "PackageType": "Package",
+  "PackagesByAuthor": [ "Diplo.GodMode", "Diplo.AuditLogViewer", "Diplo.Translator", "Diplo.DictionaryEditor", "DiploTraceLogViewer" ],
+  "Tags": [
+    "media",
+    "download",
+    "images",
+    "zip"
+  ],
+  "Screenshots": [
+    {
+      "ImageUrl": "https://user-images.githubusercontent.com/6676168/161609461-cc085543-4330-467c-ae1c-1c907269d56f.PNG",
+      "Caption": "Media Download Menu"
+    }
+  ]
+}
+
+// https://marketplace.umbraco.com/listing
